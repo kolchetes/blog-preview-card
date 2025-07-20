@@ -1,8 +1,10 @@
-::root {
+:root {
     --ten-pixels: 0.625rem;
+    --align-left-margin: 1.2rem;
     --font-size-base: 1rem; /* 16px */
-    --font-size-lg: 1.25 /* 20px */
+    --font-size-lg: 1.56rem /* 20px */
 }
+
 @font-face {
     font-family: 'Figtree';
     src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
@@ -33,7 +35,7 @@ body {
 }
 
 .post-card { 
-    width: 450px;
+    width: 400px;
 
     display: flex;
     flex-direction: column;
@@ -52,6 +54,7 @@ body {
 
 .post-thumb {
     margin: 0 auto;
+    padding: var(--ten-pixels);
 }
 
 .post-thumb > img {
@@ -59,16 +62,31 @@ body {
 } 
 
 .post-tag {
-    margin: 1rem;
-    padding: 0.720rem;
+    margin: var(--ten-pixels) 0 var(--ten-pixels) var(--align-left-margin);
+    padding: var(--ten-pixels);
     border-radius: 5px;
 
     font-weight: bold;
     background-color: hsl(47, 88%, 63%);
 }
  
- 
- 
+.post-date, .post-title, .post-info, .post-author {
+    margin: var(--ten-pixels) 0 var(--ten-pixels) var(--align-left-margin);
+} 
+
+.post-title {
+    font-size: var(--font-size-lg);
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-pfp {
+    width: 25%;
+    margin-right: var(--ten-pixels)
+}
  
  
 
