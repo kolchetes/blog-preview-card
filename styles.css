@@ -1,6 +1,6 @@
 :root {
     --ten-pixels: 0.625rem;
-    --align-left-margin: 1.2rem;
+    --align-left-margin: 1.4rem;
     --font-size-base: 1rem; /* 16px */
     --font-size-lg: 1.56rem /* 20px */
 }
@@ -42,6 +42,7 @@ body {
     align-items: flex-start;
     justify-content: center;
 
+    margin-top: 6.25rem;
     padding: 10px;
 
     background-color: white;
@@ -64,7 +65,7 @@ body {
 .post-tag {
     margin: var(--ten-pixels) 0 var(--ten-pixels) var(--align-left-margin);
     padding: var(--ten-pixels);
-    border-radius: 5px;
+    border-radius: 0.325rem;
 
     font-weight: bold;
     background-color: hsl(47, 88%, 63%);
@@ -78,9 +79,19 @@ body {
     font-size: var(--font-size-lg);
 }
 
+.post-title > a {
+    color: #000;
+    text-decoration: none;
+}
+
+.post-title > a:hover {
+    color: hsl(47, 88%, 63%);
+}
+
 .post-author {
     display: flex;
     align-items: center;
+    font-weight: bold;;
 }
 
 .author-pfp {
@@ -91,7 +102,8 @@ body {
  
 
 .attribution { 
-    font-size: 11px; 
+    margin-top: 6.25rem;
+    font-size: 0.800rem; 
     text-align: center; 
 }
 
